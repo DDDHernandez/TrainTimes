@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <title>Train Times</title>
+</head>
+
+<body style="background: lightcyan">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron" style="background-color: sandybrown">
+                <div class="container">
+                    <h1 class="display-3 justify-content-center d-flex" style="color: whitesmoke">Get your Train Time
+                        Here!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+           <div class="card"  style="background-color: slategrey">
+                <H5 style="color: whitesmoke" class="card-header">
+                    Schedule
+                 </h5>
+            <div style="background-color: white " class="card-body">
+                <div class="container">
+                    <div class="row container justify-content-center">
+                        <table class="table" id="output1">
+                            <thead>
+                                <tr>
+                                    <th scope="col" id="TrainOutput">Train Name</th>
+                                    <th scope="col" id="DestinationOutput">Destination</th>
+                                    <th scope="col" id="TrainTimeOutput">Train Arrival</th>
+                                    <th scope="col" id="FrequencyOutput">Frequency</th>
+                                </tr>
+            
+                                </tbody>
+                        </table>
+                    </div>
+            
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <Br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+                <div class="card"  style="background-color: slategrey">
+                        <H5 style="color: whitesmoke" class="card-header">
+                          Add Train
+                        </h5>
+                        <div style="background-color: white " class="card-body">
+            <form> 
+                <div class="form-group-row">
+                    <label for="formGroupExampleInput">Train Name</label>
+                    <input type="text" class="form-control" id="TrainName" placeholder="Amtrak">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Destination</label>
+                    <input type="text" class="form-control" id="Destination" placeholder="Seatle, Washington">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">First Train Time</label>
+                    <input type="text" class="form-control" id="TrainTime" placeholder="5:00 A.M.">
+                </div>
+                <div class="form-group">
+                        <label for="formGroupExampleInput2">Frequency (Min)</label>
+                        <input type="text" class="form-control" id="Frequency" placeholder="55">
+                    </div>
+                <br>
+                <button class="btn btn-info" id="Submit" type="button">Submit</button>
+            </form>
+            </div>
+        </div>
+       </div>
+       <br>
+       <br>
+       <Br>
+    </div>
+
+
+    <script src="game.js"></script> 
+</body>
+
+</html>
